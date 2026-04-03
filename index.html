@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Tr Signature Salon - Premium Salon in Faisalabad</title>
+    <meta name="description" content="Tr Signature Salon in Faisalabad offers premium hair styling, bridal makeup, and skin care services. Experience luxury and elegance at Babar Chowk.">
+    <meta name="keywords" content="Salon Faisalabad, Tr Signature Salon, Haircut Faisalabad, Bridal Makeup Faisalabad, Beauty Parlor Batala Colony">
+    <meta name="author" content="Tr Signature Salon">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Tr Signature Salon - Salon in Faisalabad">
+    <meta property="og:description" content="Redefining Elegance, One Style at a Time. Book your appointment today at Tr Signature Salon.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=1000&auto=format&fit=crop">
+    <meta property="og:url" content="https://trsignaturesalon.com">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Animate on Scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #c5a059; /* Gold/Brass */
+            --secondary: #1a1a1a; /* Charcoal */
+            --accent: #f8f8f8;
+            --text-dark: #333;
+            --text-light: #fff;
+            --transition: all 0.3s ease-in-out;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, .logo {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* --- Navigation --- */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(26, 26, 26, 0.95);
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        nav.scrolled {
+            padding: 10px 50px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            color: var(--primary);
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: var(--primary);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .hamburger {
+            display: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* --- Hero Section --- */
+        #home {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--text-light);
+            padding: 0 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            margin-bottom: 10px;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        .btn-primary {
+            padding: 15px 40px;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            text-transform: uppercase;
+            font-weight: 600;
+            transition: var(--transition);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-primary:hover {
+            background: transparent;
+            color: var(--primary);
+        }
+
+        /* --- Global Sections --- */
+        section {
+            padding: 100px 10%; /* Desktop Padding */
+        }
+
+        /* @media (max-width: 768px) {
+            section {
+                padding: 60px 20px; /* Mobile Padding - Fixes the right-side gap issue */
+            }
+        } */
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            position: relative;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .section-title h2::after {
+            content: '';
+            width: 60%;
+            height: 3px;
+            background: var(--primary);
+            position: absolute;
+            bottom: -10px;
+            left: 20%;
+        }
+
+        /* --- About Section --- */
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-img img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 20px 20px 0px var(--primary);
+        }
+
+        .about-text h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        /* --- Services Section --- */
+        #services { background: var(--accent); }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: var(--transition);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-img {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .service-info {
+            padding: 25px;
+            text-align: center;
+        }
+
+        .service-price {
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-top: 10px;
+            display: block;
+        }
+
+        /* --- Gallery Section --- */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .gallery-item {
+            height: 250px;
+            overflow: hidden;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        /* --- Testimonials --- */
+        #testimonials { background: var(--secondary); color: white; }
+        #testimonials .section-title h2 { color: white; }
+
+        .testimonial-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: rgba(255,255,255,0.05);
+            padding: 40px;
+            border-radius: 15px;
+            flex: 1 1 300px;
+            max-width: 400px;
+        }
+
+        .stars { color: var(--primary); margin-bottom: 15px; }
+
+        /* --- Contact Section --- */
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        .contact-info-list {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .contact-info-list li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-info-list i {
+            color: var(--primary);
+            margin-right: 15px;
+            font-size: 1.2rem;
+        }
+
+        .map-container {
+            width: 100%;
+            height: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background: var(--secondary);
+            color: white;
+            padding: 50px 10% 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 40px;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            margin-right: 20px;
+            transition: var(--primary);
+        }
+
+        .social-links a:hover { color: var(--primary); }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            font-size: 0.8rem;
+            color: #888;
+        }
+
+        /* --- Floating Buttons --- */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            background: #25d366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            z-index: 1000;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+            text-decoration: none;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--primary);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 5px;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            cursor: pointer;
+        }
+
+        /* Lightbox for Gallery */
+        #lightbox {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.9);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+        }
+
+        #lightbox img {
+            max-width: 90%;
+            max-height: 80%;
+            border: 3px solid white;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .about-container, .contact-wrapper { grid-template-columns: 1fr; }
+            .hero-content h1 { font-size: 2.5rem; }
+        }
+
+        @media (max-width: 768px) {
+            nav { padding: 15px 20px; }
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: var(--secondary);
+                text-align: center;
+                padding: 20px 0;
+            }
+            .nav-links.active { display: flex; }
+            .nav-links li { margin: 15px 0; }
+            .hamburger { display: block; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" alt="Zoomed view">
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <a href="#" class="logo">TR SIGNATURE</a>
+        <div class="hamburger" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#testimonials">Reviews</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home">
+        <div class="hero-content" data-aos="fade-up">
+            <h1>Tr Signature Salon</h1>
+            <p>Redefining Elegance, One Style at a Time</p>
+            <a href="#contact" class="btn-primary">Book Now</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="about-container">
+            <div class="about-img" data-aos="fade-right">
+                <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=1000&auto=format&fit=crop" alt="Salon Interior">
+            </div>
+            <div class="about-text" data-aos="fade-left">
+                <h3>The Art of Beauty in Faisalabad</h3>
+                <p>Tr Signature Salon is Faisalabad's premier destination for those seeking excellence in beauty and grooming. With years of experience and a team of dedicated professionals, we provide a relaxing atmosphere and world-class services.</p>
+                <p style="margin-top: 15px;">Whether you're preparing for your big day or just need a fresh new look, our personalized approach ensures you leave feeling confident and rejuvenated.</p>
+                <div style="margin-top: 25px; display: flex; gap: 20px;">
+                    <div><strong>10+</strong><br>Years Experience</div>
+                    <div><strong>5000+</strong><br>Happy Clients</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="section-title" data-aos="fade-up">
+            <h2>Our Services</h2>
+            <p>Premium beauty treatments tailored for you</p>
+        </div>
+        <div class="services-grid">
+            <!-- Service 1 -->
+            <div class="service-card" data-aos="zoom-in">
+                <img src="https://images.unsplash.com/photo-1560869713-7d0a29430803?q=80&w=1000&auto=format&fit=crop" class="service-img" alt="Hair Styling">
+                <div class="service-info">
+                    <h3>Signature Haircut</h3>
+                    <p>Modern cuts and styling that suit your face shape and personality.</p>
+                    <span class="service-price">From Rs. 1,500</span>
+                </div>
+            </div>
+            <!-- Service 2 -->
+            <div class="service-card" data-aos="zoom-in" data-aos-delay="100">
+                <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=1000&auto=format&fit=crop" class="service-img" alt="Makeup">
+                <div class="service-info">
+                    <h3>Bridal Glow Makeup</h3>
+                    <p>Exquisite bridal makeup packages for your special day.</p>
+                    <span class="service-price">From Rs. 25,000</span>
+                </div>
+            </div>
+            <!-- Service 3 -->
+            <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
+                <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?q=80&w=1000&auto=format&fit=crop" class="service-img" alt="Skin Care">
+                <div class="service-info">
+                    <h3>Organic Facials</h3>
+                    <p>Revitalize your skin with our deep cleaning organic facials.</p>
+                    <span class="service-price">From Rs. 3,500</span>
+                </div>
+            </div>
+            <!-- Service 4 -->
+            <div class="service-card" data-aos="zoom-in">
+                <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=1000&auto=format&fit=crop" class="service-img" alt="Hair Color">
+                <div class="service-info">
+                    <h3>Premium Hair Coloring</h3>
+                    <p>Balayage, highlights, and full coverage using top-tier products.</p>
+                    <span class="service-price">From Rs. 8,000</span>
+                </div>
+            </div>
+            <!-- Service 5 -->
+            <div class="service-card" data-aos="zoom-in" data-aos-delay="100">
+                <img src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?q=80&w=1000&auto=format&fit=crop" class="service-img" alt="Manicure">
+                <div class="service-info">
+                    <h3>Mani & Pedi</h3>
+                    <p>Luxurious hand and foot care for a polished, elegant look.</p>
+                    <span class="service-price">From Rs. 2,000</span>
+                </div>
+            </div>
+            <!-- Service 6 -->
+            <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
+                <img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?q=80&w=1000&auto=format&fit=crop" class="service-img" alt="Hair Treatment">
+                <div class="service-info">
+                    <h3>Keratin Treatment</h3>
+                    <p>Smooth, frizz-free hair that lasts for months.</p>
+                    <span class="service-price">From Rs. 12,000</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+        <div class="section-title" data-aos="fade-up">
+            <h2>Our Gallery</h2>
+            <p>Glance at our artistic transformations</p>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item" data-aos="fade-up" onclick="openLightbox(this)">
+                <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=600" alt="Gallery 1">
+            </div>
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="100" onclick="openLightbox(this)">
+                <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=600" alt="Gallery 2">
+            </div>
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="200" onclick="openLightbox(this)">
+                <img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?q=80&w=600" alt="Gallery 3">
+            </div>
+            <div class="gallery-item" data-aos="fade-up" onclick="openLightbox(this)">
+                <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=600" alt="Gallery 4">
+            </div>
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="100" onclick="openLightbox(this)">
+                <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?q=80&w=600" alt="Gallery 5">
+            </div>
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="200" onclick="openLightbox(this)">
+                <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=600" alt="Gallery 6">
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials">
+        <div class="section-title" data-aos="fade-up">
+            <h2>Client Reviews</h2>
+            <p>What our beautiful clients say about us</p>
+        </div>
+        <div class="testimonial-container">
+            <div class="testimonial-card" data-aos="flip-left">
+                <div class="stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p>"Best salon experience in Faisalabad! The bridal makeup was exactly how I wanted it. Highly recommended!"</p>
+                <h4 style="margin-top: 20px;">- Sana Ahmed</h4>
+            </div>
+            <div class="testimonial-card" data-aos="flip-left" data-aos-delay="100">
+                <div class="stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p>"Their hair treatments are magical. My hair feels so healthy and shiny. The staff is very professional."</p>
+                <h4 style="margin-top: 20px;">- Maria Khan</h4>
+            </div>
+            <div class="testimonial-card" data-aos="flip-left" data-aos-delay="200">
+                <div class="stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                </div>
+                <p>"I love the ambiance at Tr Signature. It's my go-to place for my monthly facial and hair styling."</p>
+                <h4 style="margin-top: 20px;">- Zainab Sheikh</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="section-title" data-aos="fade-up">
+            <h2>Contact Us</h2>
+            <p>Visit us or book an appointment</p>
+        </div>
+        <div class="contact-wrapper">
+            <div class="contact-info" data-aos="fade-right">
+                <ul class="contact-info-list">
+                    <li><i class="fas fa-map-marker-alt"></i> 457 A Babar Chowk Main Rd, Batala Colony, Faisalabad</li>
+                    <li><i class="fas fa-phone"></i> 03098556000</li>
+                    <li><i class="fas fa-envelope"></i> trsignature@gmail.com</li>
+                    <li><i class="fas fa-clock"></i> Mon - Sun: 11:00 AM - 09:00 PM</li>
+                </ul>
+                <div class="map-container">
+                    <!-- Embedded Google Map -->
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3405.6566848130887!2d73.1023772!3d31.3960309!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3922687593c68337%3A0xc07a8b417258418c!2sBabar%20Chowk%2C%20Peoples%20Colony%20No%202%2C%20Faisalabad!5e0!3m2!1sen!2spk!4v1700000000000!5m2!1sen!2spk" 
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+            <div class="contact-form" data-aos="fade-left">
+                <form id="salonForm">
+                    <input type="text" placeholder="Your Full Name" required>
+                    <input type="email" placeholder="Email Address" required>
+                    <input type="tel" placeholder="Phone Number" required>
+                    <textarea rows="5" placeholder="Which service are you interested in?"></textarea>
+                    <button type="submit" class="btn-primary" style="width: 100%; border: none; cursor: pointer;">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <h3>Tr Signature Salon</h3>
+                <p style="margin-top: 15px; color: #888;">Providing luxury beauty services in the heart of Faisalabad. Experience the touch of perfection.</p>
+            </div>
+            <div>
+                <h3>Quick Links</h3>
+                <ul style="list-style: none; margin-top: 15px;">
+                    <li><a href="#about" style="color: #888; text-decoration: none;">About Us</a></li>
+                    <li><a href="#services" style="color: #888; text-decoration: none;">Services</a></li>
+                    <li><a href="#gallery" style="color: #888; text-decoration: none;">Gallery</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Follow Us</h3>
+                <div class="social-links" style="margin-top: 15px;">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/923098556000"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2023 Tr Signature Salon Faisalabad. All Rights Reserved.
+        </div>
+    </footer>
+
+    <!-- Back to top & WhatsApp -->
+    <a href="https://wa.me/923098556000" class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize Animations
+        AOS.init({ duration: 1000, once: true });
+
+        // Navbar Scroll Effect
+        window.onscroll = function() {
+            const nav = document.getElementById('navbar');
+            const btt = document.getElementById('backToTop');
+            if (window.pageYOffset > 100) {
+                nav.classList.add('scrolled');
+                btt.style.display = "flex";
+            } else {
+                nav.classList.remove('scrolled');
+                btt.style.display = "none";
+            }
+        };
+
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        // Smooth Scroll Close Menu (Mobile)
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navLinks').classList.remove('active');
+            });
+        });
+
+        // Gallery Lightbox
+        function openLightbox(element) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightboxImg.src = element.querySelector('img').src;
+            lightbox.style.display = 'flex';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+
+        // Back to Top functionality
+        document.getElementById('backToTop').addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Form Submit Simulation
+        document.getElementById('salonForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for your message! Our team will contact you shortly to confirm your appointment.');
+            e.target.reset();
+        });
+    </script>
+</body>
+</html>
